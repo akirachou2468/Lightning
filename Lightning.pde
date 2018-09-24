@@ -16,25 +16,10 @@ void draw()
     fill(204, 230, 255);
     ellipse(200,200,800,800);
     
-    if(endY<450)
-    {
-        
-        stroke(0,0,153);
-
-        endX = startX + (int)(Math.random()*11)-5;
-        endY = startY + (int)(Math.random()*5);    
-        line(startX, startY, endX, endY);
-        startX = endX;
-        startY = endY;
-    }
-      noStroke();
-      fill(255);
-      rect(0,0,400,20);
-      rect(0,380,400,20);
-      rect(380,0,20,400);
-      rect(190,0,20,400);
-      rect(0,0,20,400);
-      rect(0,190,400,20);
+    lightning();
+     lightning();
+      lightning();
+    window();
     
 }
 
@@ -48,4 +33,30 @@ void mouseClicked()
     endY = 0;
 
 
+}
+
+void lightning()
+{
+  if(endY<450)
+    {
+        
+        stroke(0,0,153);
+        endX = startX + (int)(Math.random()*11)-5;
+        endY = startY + (int)(Math.random()*5);    
+        line(startX, startY, endX, endY);
+        startX = endX;
+        startY = endY;
+
+    }
+          
+}
+void window() {
+   noStroke();
+      fill(255);
+      rect(0,0,400,20);
+      rect(0,380,400,20);
+      rect(380,0,20,400);
+      rect(190,0,20,400);
+      rect(0,0,20,400);
+      rect(0,190,400,20);
 }
